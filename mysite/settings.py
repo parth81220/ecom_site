@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'f=h#3@p+50jj+!jvkgdo-oolvo0jn&en&@o%xo1doyl(mi1!9n'
 
-CSRF_TRUSTED_ORIGINS = ['http://65.0.84.104:1337']
+CSRF_TRUSTED_ORIGINS = ['http://65.0.84.104:1337/admin']
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 DEBUG = bool(os.environ.get("DEBUG", default=0))
