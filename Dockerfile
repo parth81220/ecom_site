@@ -25,12 +25,12 @@ RUN apt-get install netcat-traditional
 
 COPY entrypoint.sh .
 RUN sed -i 's/\r$//g' entrypoint.sh
-RUN sudo chmod +x entrypoint.sh
+RUN chmod +x entrypoint.sh
 # copy project
 COPY . $APP_HOME
 
 # chown all the files to the app user
-RUN sudo chown -R app:app $APP_HOME
+RUN chown -R app:app $APP_HOME
 
 # change to the app user
 USER app
