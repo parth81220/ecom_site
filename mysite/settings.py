@@ -30,7 +30,7 @@ DEBUG = bool(os.environ.get("DEBUG", default=0))
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['http://65.0.84.104:1337', '*']
 
 
 # Application definition
