@@ -1,0 +1,12 @@
+gunicorn
+asgiref
+Django
+numpy
+pandas
+pillow
+python-dateutil
+pytz
+six
+sqlparse
+tzdata
+psycopg2-binary
