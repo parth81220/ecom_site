@@ -24,7 +24,7 @@ RUN apt-get update
 RUN apt-get install netcat-traditional
 
 COPY entrypoint.sh .
-RUN sudo sed -i 's/\r$//g' entrypoint.sh
+RUN sed -i 's/\r$//g' entrypoint.sh
 RUN sudo chmod +x entrypoint.sh
 # copy project
 COPY . $APP_HOME
