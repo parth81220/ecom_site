@@ -7,6 +7,7 @@ services:
     volumes:
       - .:/app
       - static_volume:/home/app/web/staticfiles
+      - media_volume:/home/app/web/static/images
     expose:
     - 8000
     env_file:
@@ -28,6 +29,7 @@ services:
     volumes:
       - .:/app
       - static_volume:/home/app/web/staticfiles
+      - media_volume:/home/app/web/static/images
     depends_on:
       - web
 
