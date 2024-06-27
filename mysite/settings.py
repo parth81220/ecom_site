@@ -22,7 +22,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'f=h#3@p+50jj+!jvkgdo-oolvo0jn&en&@o%xo1doyl(mi1!9n'
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = False
 
+CORS_ALLOW_ALL_ORIGINS = True
 CSRF_TRUSTED_ORIGINS = ['http://65.0.84.104:1337/admin']
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
