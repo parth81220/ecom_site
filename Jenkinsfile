@@ -11,7 +11,7 @@ pipeline {
         stage("build"){
             steps {
                 echo "hello world"
-                sh "docker build -t my-app ."
+                sh "sudo docker build -t my-app ."
             }
         }
         stage("push"){
