@@ -1,6 +1,6 @@
 # 🎯 Django E-Commerce Website
 
-This is a **fully functional e-commerce website** built using **Django** with support for **Docker, Jenkins, and Nginx** for deployment.
+This is a **fully functional e-commerce website** built using **Django** with support for **Docker, Jenkins, Nginx, and AWS Deployment** for production.
 
 ---
 
@@ -13,6 +13,7 @@ This is a **fully functional e-commerce website** built using **Django** with su
 ✅ **Dockerized Deployment** - Includes `Dockerfile` and `docker-compose.yml`  
 ✅ **CI/CD Integration** - Automated deployment using **Jenkins**  
 ✅ **Nginx as Reverse Proxy** - Handles incoming traffic efficiently  
+✅ **AWS Deployment** - The site is hosted on **AWS EC2** and accessible worldwide  
 
 ---
 
@@ -40,7 +41,7 @@ This is a **fully functional e-commerce website** built using **Django** with su
 ├── Jenkinsfile           # CI/CD pipeline for deployment
 ├── requirements.txt      # Python dependencies
 ├── manage.py             # Django management commands
-└── .env                  # Environment variables (Database, Secret Key, etc.)
+├── .env                  # Environment variables (Database, Secret Key, etc.)
 ```
 
 ---
@@ -99,6 +100,25 @@ This will start Django, PostgreSQL (or MySQL), and Nginx.
 
 ---
 
+## ☁️ Deploying on AWS
+
+### **1️⃣ AWS Setup**
+- Deployed on **AWS EC2** for continuous availability
+- Configured **Nginx as a reverse proxy**
+- Used **Gunicorn** to serve the Django application
+- **Security Groups** configured to allow global access
+
+### **2️⃣ Steps to Deploy on AWS**
+```sh
+  ssh -i your-key.pem ubuntu@your-aws-instance-ip
+  git clone https://github.com/yourusername/ecom_site.git
+  cd ecom_site
+  docker-compose up --build -d
+```
+- The website is now accessible **worldwide** 🌍
+
+---
+
 ## 🔄 CI/CD with Jenkins
 
 ### **1️⃣ Install Jenkins Locally**
@@ -116,7 +136,7 @@ This will start Django, PostgreSQL (or MySQL), and Nginx.
 
 - 📦 Add **payment gateway integration**
 - 📱 Implement **mobile-friendly UI**
-- 🚀 Deploy on **AWS/GCP** for production
+- 🚀 Scale using **AWS Load Balancer**
 
 ---
 
